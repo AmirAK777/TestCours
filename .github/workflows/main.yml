@@ -34,4 +34,4 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         port: ${{ secrets.DEPLOY_PORT }}
         source: "target/AmirAmir.war"  # Le chemin dépend de votre projet Maven
-        target: "/opt/tomcat/webapps"
+        target: "/opt/tomcat/AmirAmir.war"
