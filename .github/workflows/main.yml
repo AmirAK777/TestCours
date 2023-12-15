@@ -8,8 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: permissions
+        run: chmod +x mvnw
+
       - name: Build and test
         run: ./mvnw clean package
+
       - name: Build Docker image
         run: |
           docker build -t my-spring-boot-app .
