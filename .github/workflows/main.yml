@@ -35,7 +35,7 @@ jobs:
         target: "/opt/tomcat/webapps"
 
     - name: SSH into AWS EC2 and restart Tomcat
-      uses: appleboy/ssh-action@v2
+      uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST_DNS }}
         username: ${{ secrets.USERNAME }}
